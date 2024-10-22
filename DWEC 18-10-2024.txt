@@ -1,0 +1,88 @@
+
+
+								DWEC.
+	
+	Los datos primitivos que hemos visto hasta ahora: 
+		
+	- Cadena.
+	- Número.
+	- Booleano.
+	- Nulo o Null.
+	- No definido o undefined.
+	- Symbol (em ES6)
+	
+	El resto son objetos, un valor en memoria que se refiera mediante un identificador.
+	
+	Los objetos en particular pueden ser nativos o de alto nivel. (depende del navegador).
+	Posteriormente, los objetos definidos por el usuario.
+	
+	Objetos Navitos: NO dependen del navegador. 
+		- String.	
+		- Number.	No se suelen utilizarm Más rápido "datos primitivos"
+		- Boolean.	Let miCadena = new String();
+		- Date.		
+		- Math.
+		- RegExp.
+		- Array.
+		- Function.
+		-Object.
+	
+	OBJETOS DE ALTO NIVEL. dependen del navegador.
+		- Window.
+		- Screen.
+		- Navigator.
+		- Location.
+		- History.
+		- Document. (este es del DOM).
+
+	DEFINICIÓN DE OBJETO.
+		var ciclista { 
+			nombre="Pedro", apellido:"Delgado", anio="1965", 
+		}
+	Un objeto es una colección de variables y funciones agrupadas estructuralmente.
+		- Variables = propiedas.
+		- Funciones = métodos.
+	Son pares clave:valor y se usa el separador ",". Pueden contener datos primitivos, otros objetos, funciones...
+	
+	const miLibro {
+		titulo:"Sistemas Gestion Empresarial"-
+		Autor :"Juan José Garcia Lazo"	
+	} 
+
+	Un constructor. Nos permite definir un objeto del tipo que sea. Todos los objetos nativos, (excepto MATH) utilizan la siguiente sintaxis.
+
+	new <TipoObejtoNativo> ([valor]);
+		
+	Nos es recomendable definir de tipo sitrng, nmber, boolean, array, RegExp o function, que pueden ser definidos como datos primitivos.
+	var miFcha = new Date() Si tiene sentido como declaración. 
+
+	Un objeto de tpo string contiene caracteres (dentro de una cadena). Pueden ser:
+	- Instanciar. Crear un ejemplar del objeto (con datos primitivos con new)
+	- Concatenar. Unir dos cadenas de texto (+)
+	- Medir con length se obtiene el número de caracteres.
+
+	W3school.
+		- Propiedades.
+		
+			- Constructor. Muestra la función constructora.
+			- Prototype. Permite añadir propiedades y metodos a un objeto. Objeto.prototype.nuevapropiedad = valor
+			- Length. Muesta el número de caracteres de una cadena. 
+
+		- Metodos. Mirarse la lista de los metodos.
+			Mirarse la biblioteca de la w3school.
+			- charAt() Devuelve el caracter que ocupa la posición especificada.
+			- IndexOf() Devuelve la primera posición de un caracter en una cadena.
+			- LastIndexOf() Devuelve la última posición de un caracter en una cadena.
+			- Search() Busca una cadena o expersión regular en otra cadena. 
+
+
+
+
+
+	
+
+
+	
+
+
+

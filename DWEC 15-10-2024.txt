@@ -1,0 +1,17 @@
+
+
+	<script>
+		let lienzo=document.getElementById("lienzo");
+		let numerolineas=Number(prompt("Introduce el número de lineas"));
+		for (let fila =0; fila<numeroLineas; fila++){
+			let asterisco="";
+			let espacios="";
+			for (let esp=0; esp<numeroLineas; esp++) {
+				espacios+="$nbsp;$nbsp;"
+			}
+			for (let ast=0; ast<numeroLineas; ast++) {
+				asteriscos+="*"
+			}
+			linezo.innerHTML=lienzo.innerHTML+espacios+asteriscos+"<br>"
+		}
+	</script>

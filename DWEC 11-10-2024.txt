@@ -1,0 +1,89 @@
+		
+		DWEC.
+
+	Condición if-else.
+	Modifica el flujo del programa.
+	Sintaxis:
+	if condition {sentencia} else {sentecia2} Recomendable {} siempre aunque haya una única instrucción.
+	Obligatorio desde JavaScript 6.
+	if contition {
+		Sentencia1;
+	} else {
+		Sentencia2;
+	}
+
+	Ejemplo.
+	if (edad < 18) {
+		let textoLet ="Eres mayor de edad";
+		var Textovar ="Eres mayor de edad";
+	} else {
+		let textoLet ="Eres menor de edad";
+		var textoVar ="Eres menor de edad";
+	}
+	console.log (textoLet); // No lo va a imprimir por estar fuera del bucle.
+	console.log (textoVar); 
+
+	if-else-if.
+	else if añade una nueva condición en el caso de que la primera haya sido false.
+		if (condition1) {
+			// Instrucciones si la condition1 es verdadera
+		} else if (condition2) {
+			// Instrucciones si la condition1 es falsa y la condition2 es verdadera. 
+		} else if (condition3) {
+			// Instrucciones is la condition1 es falsa y la condition2 es falsa y la tercerda la verdadera 
+		}
+
+	switch.
+	Va comprobando con instancias case cuál de las opciones se corresponde con la expresión y ejecuta las instrucciones asociadas.
+	switch (expresion) {
+		case1: console.log("hello world"); break;
+
+	}
+	
+	For. Consiste en tres expresiones opcionales entre paréntesis y separadas por punto y coma. La prima indica desde que nñumero, la segunda la condiciño que debe cimplir dicho número y por ultimo el incremento o decremento en cada iteración del bucle.	
+	Se puede trabajar con dos o más valores en un for. 	
+
+	for (i = 5; i<=5 > i++) {
+		alert (i)	
+		**NOTA Podemos asaltar el primer intervalo, es decir tener la declaración de i fuera del for. 
+
+	}
+
+	
+	For in. Se utiliza para moverse por las propiedades de un objeto. 
+	for (variable in objeto) {
+		Instrucciones.
+	}
+
+	La variable es el índice que se utiliza para recorrer el objeto. 
+	<script>
+	let barco = {nombre:"Ocean Melody", tipo:"Goleta", eslora:16, edad:20};
+	let prop; //prop es índice que va a recorrer el objeto. 	
+		for (prop in barco) {
+			alert(barco[prop]);
+		}
+	</script>
+
+	for of	
+	Se utiliza para moverse por la propiedades de un objeto. Es similar al for in pero la variable contador en vez de tomar como valor cada indice todma cada elemento.
+	for (variable of objeto) {
+		Instrucciones
+	}
+	Se utiliza para recorrer una cadena
+	<script>
+	let datos = [5, 10, 15, 85]
+	let sumaDatos = 0;
+	for (let valor of datos) {
+		sumaDatos += valor;
+	}	
+	</script>
+
+	while. Ejecuta una o varias instrucciones mientras una condición sea verdadera. La condición se evalua ANTES de ejecutar la sentencia, por lo que pudiera ocurrir que ninguna de las sentencias que encierra el bloque se ejecuten nunca.
+	Se puede producir con cierta facilidad un bucle infinito.
+		while (condition) {
+			sentencia;
+			sentencia;
+		}
+
+	Con while se controla la introducción de datos erróneos.
+	Solo hay un caso particular en el que for y while pueden ser equivalentes. (¿Cuando?)

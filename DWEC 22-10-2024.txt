@@ -1,0 +1,45 @@
+
+
+
+		DWEC. 
+	Conjuto de elementos a los que se accede por un indice.
+	Se trata de una estructura de datos ESTATICA. Alamcena en una misma variable multiples tipos de datos: valores primitivos, objetos, etc.. Se referencian con un índice numérico. (a diferencia de los objetos que se referencian con un nombre).
+	
+	const meses = ["enero", "marzo", "junio", "noviembre"]; //Notación JSON.
+	let meses = new array (["enero", "marzon", "junio", "nobiembre"]) // new array esta tachado.
+	
+	Los objetos dentro del array pueden ser de tipo diferente. 
+	<p id="aqui"></p>
+		<script> 
+			const DIAS = ["lunes", "martes", "jueves", "viernes"];
+			DIAS[1] = Date();
+			Document.get...("aqui").innerHTML = DIAS;	
+		</script>
+
+	lenght devuelve la longitud del array.
+	dias.lenght
+	Se puede utilizar para recorrer el Array.
+		for (let i = 0; i < numeros.length; i++) {
+			console.log(numeros[i])
+		}
+	Document.write("<br/><br/> todos los eleemntos de la matriz:");
+	for (let i = 0; i < numeros.length; i++){
+		console.log(numeros[i]);	
+	}
+
+	Devuelve true si es un objeto de tipo array.
+	Si se utiliza typeof con un array se obtiene un object.
+	
+	document.write (<br/> ¿es una array?);
+	
+	Cada objeto (y los arrays son un tipo de objeto) tienen defiinido el metodo. tostring();
+	ie lo convierte en una cadena. 
+	Este metodo e sllamado automaticamente cuando por ejemplo, queremos mostrar un array por la consola. En realidad console.log(a) ejecuta console.log(a.toString()).
+	En el caso de los arrays esta función devuelve una cadena con los elementos del array dentro de corchetes y separados por coma.
+	
+	Para converstir los elementos de una array en una cadena se utiliza .join('separador')
+
+	.sort() Ordena alfabeticamente los elementos del array. Se le puede pasar una función que le indique como ordenar que delvodera un valor negattivo si el primero eleemnto es mayor, positivo si es mayor el segundo o 0 si son iguales. 
+
+
+	let miArray =["bonna", "sera", "forellino"]

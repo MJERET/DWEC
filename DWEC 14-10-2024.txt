@@ -1,0 +1,8 @@
+Saltos.
+	Break y Continue. 
+	
+	Break termina el buble switch o etiqueta y transfiere el control del programa a la siguiete instrucción que se encuentra después de la instrucción de terminación del elemento.
+	
+	Continue. Etiqueta opcional, siempre debe estar en un bucle.
+
+	Vamos a hacer un programa que imprima un rombo de asteriscos. 
