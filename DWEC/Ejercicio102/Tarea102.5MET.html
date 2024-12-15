@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>  
+        <title>Ejercicio 102.5</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+            // Datos iniciales de contactos
+            let contactos = [
+                { nombre: "Maxwell Wright", telefono: "(0191) 719 6495", correo: "curabitur.egestas.nunc@nonummyac.co.uk" },
+                { nombre: "Raja Villarreal", telefono: "0866 398 2895", correo: "posuere.vulputate@sed.com" },
+                { nombre: "Helen Richards", telefono: "0800 1111", correo: "libero@convallis.edu" }
+            ];
+
+            // Función para mostrar el primer contacto
+            function mostrarPrimerContacto() {
+                if (contactos.length > 0) {
+                    console.log("Primer contacto:", contactos[0].nombre, contactos[0].telefono, contactos[0].correo);
+                } else {
+                    console.log("La lista de contactos está vacía.");
+                }
+            }
+
+            // Función para mostrar el último contacto
+            function mostrarUltimoContacto() {
+                if (contactos.length > 0) {
+                    console.log("Último contacto:", contactos[contactos.length - 1].nombre, contactos[contactos.length - 1].telefono, contactos[contactos.length - 1].correo);
+                } else {
+                    console.log("La lista de contactos está vacía.");
+                }
+            }
+
+            // Función para mostrar todos los contactos
+            function mostrarTodosContactos() {
+                if (contactos.length > 0) {
+                    console.log("Lista completa de contactos:");
+                    contactos.forEach((contacto, index) => {
+                        console.log(`${index + 1}. ${contacto.nombre} | ${contacto.telefono} | ${contacto.correo}`);
+                    });
+                } else {
+                    console.log("La lista de contactos está vacía.");
+                }
+            }
+
+            // Función para agregar un nuevo contacto
+            function agregarNuevoContacto() {
+                let nuevoNombre = prompt("Introduce el nombre del nuevo contacto:", "Nombre Apellido");
+                let nuevoTelefono = prompt("Introduce el teléfono del nuevo contacto:", "000-000-0000");
+                let nuevoCorreo = prompt("Introduce el correo del nuevo contacto:", "correo@ejemplo.com");
+
+                if (nuevoNombre && nuevoTelefono && nuevoCorreo) {
+                    contactos.push({ nombre: nuevoNombre, telefono: nuevoTelefono, correo: nuevoCorreo });
+                    console.log("Nuevo contacto agregado correctamente.");
+                } else {
+                    console.log("Error: Todos los campos son obligatorios. El contacto no se agregó.");
+                }
+            }
+
+            // Menú principal en un bucle
+            let opcion;
+            do {
+                opcion = prompt(
+                    "Elige una opción:\n" +
+                    "1. Mostrar el primer contacto (primero)\n" +
+                    "2. Mostrar el último contacto (último)\n" +
+                    "3. Mostrar todos los contactos (todos)\n" +
+                    "4. Añadir un nuevo contacto (nuevo)\n" +
+                    "5. Salir del programa (salir)"
+                );
+
+                switch (opcion) {
+                    case "1":
+                    case "primero":
+                        mostrarPrimerContacto();
+                        break;
+                    case "2":
+                    case "último":
+                        mostrarUltimoContacto();
+                        break;
+                    case "3":
+                    case "todos":
+                        mostrarTodosContactos();
+                        break;
+                    case "4":
+                    case "nuevo":
+                        agregarNuevoContacto();
+                        break;
+                    case "5":
+                    case "salir":
+                        console.log("Programa terminado.");
+                        break;
+                    default:
+                        console.log("Opción no válida. Por favor, intenta de nuevo.");
+                }
+            } while (opcion !== "5" && opcion !== "salir");
+
+        </script>
+    </body>
+</html>
+
