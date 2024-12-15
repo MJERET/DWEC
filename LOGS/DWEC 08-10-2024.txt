@@ -1,0 +1,33 @@
+
+
+
+						DWEC
+	-Hacemos el ejercicio 4 de ejercicios Basicos.   
+
+	-parámetros REST y SPREAD.
+	-REST permite que una función trate un número indefinido de argumentos.
+		
+		function listadoFrutas(fruta1, fruta2, ...restoFrutas) {
+			console.log("La fruta 1 es: " +fruta1);
+			console.log("La fruta 2 es: " +fruta2);
+			console.log("Resto es: " +restoFrutas);
+		}
+	listadoFrutas("naranja","manzana","pera","sandia","melón")
+	- Se pueden invocar con más argumentos (arguments[], lenght).
+	- Pueden utilizar (y modificar) variables globales... No utilizar.	
+	- Sin paréntesis, se referencia al OBJETO que representa la función. 
+	- Como son objetos, pueden ser asignadas a una variable, pasados como argumento y devueltas por otras funciones.
+	- Callbacks y progamación funcional (más adelante).
+	- Por declaración, por expresión, por constructor.
+	- Anónimas (no se invocan ni sirven para la recursividad).
+	- Flechas es simplificación sintactica. (con const porque no pueden ser reasignadas). No tienen su propio this ino que lo heredan del contexto en el que se crearon. No son housted (oir eso no se pueden invocar antes, ni pueden ser métodos en objetos). No tienen arguments.
+	
+
+
+
+
+
+
+
+
+

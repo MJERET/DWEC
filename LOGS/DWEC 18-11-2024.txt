@@ -1,0 +1,64 @@
+	
+
+	Creación del busca minas, tiene que estar listo antes del fin de la evaluación.
+	
+	- Para el busca minas, podemos hacer uso de CSS en un archivo separado.
+	- 
+
+	1. Creación del cuadrado o cuadricula.
+	2. Creación del input del usuario.
+	3. A cada celda, la puedo llamar con un clase. 
+
+
+	Manejo de errores.
+	En general, se pueden definir como comportamientos anomalos, imprevistos o no. Una aplicación debe disponer de tolerancia a fallos,
+	es decir, de la capacidad de recuperación ante a aparición de errores.
+	Los errores no se pueden evitar, pero es una eficiente gestión de los mismos es fundamental.
+	
+	¿Se producen durate:?
+	- Durante el desarrollo.
+
+	Try-catch.
+	
+	Si sucede un error en el código, el programa dejara de ejecutarse, pero el usuario solo advertira que el programa no hace nada y solo si abre la consola verá el error.
+	En JS (como en muchos otros lenguajes) existe la gestión de excepciónes mediante:
+
+	try {
+	...
+	}
+	catch (error) {
+	...	
+	}
+
+	Dentro del bloque try se pone el código a proteger y cualquier error producido en él será pasado al bloque catch donde es tratado. Opcionalmente puede haber al final un bloque finally que se ejecute. 
+	
+	Cuando algo falla, se lanza un objeto Error.
+	Que tiene propiedades específicadas como message, name, fileName, lineNumber, columnNumber y stack. Además, tiene un método muy utilizado llamado toString().
+	
+
+
+	const PUNTOS_CARDINALES = ["N","S","E","W"];
+	// control inicial de errores.
+	do {
+	   alert ("Por favor, introduzca una cantidad entre 6 y 16");
+	   var minutos = parseInt(prompt("¿De cuantos minutos dispone?"));
+	} while { (isNan(minutos) || minutos === null || minutos < 6 || minutos > 16 || minutos %2 !=0)
+	
+	}
+	
+	function paseoValido(paseoPosible) {
+	ns = 0, eo = 0 ;
+	for (let i = 0; limite = paseoPosible.lenght, i <limite; i++)
+		
+	}	
+
+	//Generación aleatorioa y sucesia de paseos posibles.
+	do {
+		paseoPosible = [];
+		for (let i = 0; i < minutos; i++) {
+			paseoPosible.push(PUNTOS_CARDINALES[Math.floor(Math.random() * PUNTOS_CARDENALES.lenght)])
+		}
+			paseoValido(paseoPosible)	
+	
+		while(paseoValido(paseoPosible))
+	}

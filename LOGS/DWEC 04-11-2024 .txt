@@ -1,0 +1,59 @@
+
+	Todos los tipos de bucles for.
+	repasar todo el contenido de clase. 
+
+	Recursividad. 
+	Mirarse el rombo. 
+
+	for. Control más detallado sobre el índice y el flujo recorre un bloque de código un número determinado.
+	Control grande sobre el indice y como lo manejo, como también el como puedo vizualizar ciertos literales.
+	
+	for in. Itera sobre las claves de un objeto. Mejor para objetos, recorre las propiedades de un objeto.
+	Perfecto para ver objetos.
+
+	for...of. Sobre los valores de un iterable. El más moderno y recomendable para arrays .
+	Aparece con jS 6 es mucho más eficiente recomendado para arrays. 		
+
+	.ForEach() !!Método de array!! apropiado para aplicar una función a cada elemento de un array. 
+
+	while Recorre un bloque de código mientras una condición evaluada.
+	
+	do / while Recorre un bloque de código mientras una condición evaluada posteriormente es verdadera.
+
+	
+	Cuarta parte ERRORES.
+
+	Se pueden definir como comportamientos anomalos.
+	Error(no controlado) Provoca que la aplicación deje de funcionar.
+	Exceepción (controlada) Situación en alguna medida esperada que se trata convenientemente.
+	Advertencia (warning) Aviso de situaciones que pueden evolucionar a error.
+	
+	Si sucede un error en el código el programa dejará de ejecutarse, pero el usuario solo advertirá que el programa
+	no hace nada y solo si abre la consola verá el error. En JS (como en muchos otros lenguajes) existe la gestion de excepciones, mediante:
+	try {
+	...
+	}
+	catch {
+	...
+	}
+
+	Dentro del bloque try se pone el código a proteger y cualquier error producido en él será pasado al bloque catch donde es tratado. Opcionalmente puede haber al final un bloque finally que se ejecuta siempre.
+
+	Cuando se produce un error JavaScript genera un objeto que contiene los detalles al respecto. El objeto se pasa como argumento para catch.
+
+	Objetos Error predefinidos (clase Error).
+	
+	Propiedades:
+	- name: (Eval,Error, RangeError, ReferenceError, SyntaxError, TypeError, URIError)
+	- message: (w3schoool)
+
+	Objeto Error. (solo haremos uso del name y del message)
+	Cuando algo falla, se lanza un objeto Error.
+	Tiene propiedades específicas como message, name, fileNmae, lineNumber, columnNumber y stack. Además, tiene un método muy utilizado llamado toString().
+	
+	Es posible lanzar errores personalizados utilizando el constructor de Error. 
+	Aunque Error es genérico, también existen errores más específicos como EvalError, InternalError, SyntaxError, RangeError, TypeError y URIError.
+
+	Función que comprueba el mes. 
+	Tengo que usuario dar un número, obligatorio que sea del 1 al 12. siendo estos los dias de los meses.
+		1. Error usando throw, "número de mes no valiado"

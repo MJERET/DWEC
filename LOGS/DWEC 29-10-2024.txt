@@ -1,0 +1,20 @@
+	
+
+	DWEC.
+	concat() une dos o más arrays
+
+	nombreArray.concat(otroNombreArray)
+	
+	sort() 
+	como mas se utiliza esta funcion es ordenando arrays de objetos. POr ejemplo dado un objeto persona con los campos nombre y edad, para ordenar un array de objetos persona por su edad.
+	
+	let ppersonasOrdenado = personas.sort(function(persona1, persona2) {
+	return persona1.edad-persona2.edad
+	})
+	Ejercicio. Utiliza una arrow function.
+	
+	toLocaleCompare.
+	Para ordenar por un campo de texto se puede usar la función toLocaleCompare:
+	let personas Ordenado = personas.sort(persona1, persona2) => persona1.nombre.localeCompare(persona2.nombre))
+	
+	Ejercicio Hacer una funcion que ordene las notas de un array pasado como parametro Si se le pasa [4,8,3,10,5] debe volver [3,4,5,8,10]. Pruebalo por consola.
