@@ -1,0 +1,34 @@
+
+		DWEC 
+	17-12-2024
+		
+	DOM. Document Object Model. Es una representación estructurada y jerárquica de un documento HTML, XHTML o XML
+	Es una interfaz que permite a los programas acceder, manipular y actualizar la estructura, el contenido y el estilo de un documento web.
+	
+	Es un estandar que define como acceder a documentos XML.
+	Es una de las innovaciones que más ha influido en el desarrollo de las páginas web dinámicas y de las aplicaciones web más complejas.
+	DOM permite a los programadores web acceder y manipular las páginas XHTML como si fueran documentos XML.
+		
+	En la programación de aplicaciones web con JS es habitual la manipulación de las páginas. Con frecuencia hay obtener valor...
+
+	Para sacar provecho a las utilidades de DOM, es necesario "trasnformar" la página original. una página HTML normal no es más que una sucesión de caracteres, por lo que es un formato
+	muy difícil de manipular. Por ello, los navegadores web transforman automáticamente todas las páginas web en una estructura mñas eficiente de manipular.
+	
+	- Estructura del documento. Cuando un navegador carga una págona web, interpreta el código HTML (o XHMTL, XML) y crea una estructura de árbol que representa la jerarquia de elementos en el documento. Está estructura se conoce con el DOM.
+	
+	- Nodos del DOM. Cada elemento, atributo, texto, comntario, etc. En el documento es representado como un nodo en el árbol del DOM. Los nodos pueden tener relaciones entre ellos, como nodos padres, hijos, hermanos, etc.
+	
+	- Acceso y manipulación.
+
+	Las especificaciones completa de DOM define 12 tipos de nodos, aunque las páginas XHTML habituales se peuden manipular manejando solamente cuatro o cinco tipos de nodos básicos.
+			
+		- Document. Nodo raiz...
+		- Element.
+		- Attr.
+		- Text.
+		- Comment.
+
+	* .innerHTML Todo lo que hay entre la etiqueta que abre eleemento yla que lo cierra, incluyendo otras etiquetas HTML.
+	* .textContent. Todo lo que hay entre la etiqueta que abre elemento y la que lo cierra, pero ignorando otras etiquetas HTML
+	* .value Devuelve la propiedad 'value' de un <input> (en el caso de un <input> de tipo texto devuelve lo que hay escrito en él). Como los <inputs> no tienen etiqueta de cierre (</input>)
+	  No podemos usar .innerHTML ni .textContent

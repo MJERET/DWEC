@@ -1,0 +1,37 @@
+            Programación asincrona.
+            La programación asincrona realiza tareas de forma secuencial.
+            ¿y si hay funciones que tienen que esperar algun acontencimiento que depende de un tercero?
+
+            JS es un lenguaje no bloqueante, que mueve la tarea a una lista de pendientes (tarea asíncrona).
+            Pero el acontencimiento puede finalmente producirse o no.
+            
+            Ejemplo: 
+                - Descargar un ficher grande.
+                - un new Audio() de una URL con mp3.
+
+            Programación asíncrona vs Multihilo
+                / JS es "single-thread". 
+
+                sincrona es que solo podemos hacer una cosa a la vez, es decir, que el momento de una tarea afecta ak tiempo de la siguiente
+
+            Se llama AJAX (Asynchronous JS and XML) tecnica de desarrollo para crear aplicaciones web asíncronas, que es compleja, con curva de aprendizaje amplia (además cada navegador utiliza metodos distintos para tratar las peticiones)
+            Propiedades de XMLHttpRequest()
+                - onload
+                - onreadystatechange
+                - ready...
+                
+            Mediante callbacks (retrollamada) Muy utilizadas con jQuery Funciones que se pasan por parámetro a otras funciones. El ejemplo más simple es: setTimeout;
+                setTimeout(function(){console.log()})
+            Mediante promesas. 
+            Api fetch
+            Mediante async/await.
+         
+            Algo que se espera que ocurra, pero de lo que no se tiene certeza. Una promesa en JS es un objeto(type=object) y tiene tres estados posibles:
+                - Pendiente(pending)
+                - Cumplida(fullfilled)
+                - rechazada(rejected)
+
+                Las API's asíncronas de los navegadores suelen devolver promesas como resultado. Cuando una función llama a una promesa está pasa a pendiente y la función sigue ejecutando su código.
+
+            Hasta que no se llame al método .resolve() o reject() estará en "pendiente"
+            Una vez pase a estado fullfilled o rejected (resolve o rejected) ya no puede pasar al otro estado o pending

@@ -1,0 +1,4 @@
+
+	Hoy en DWEC 28-01-2025
+	checkvalidity
+	js pero mas simple, hace todo lo que hemos hecho dias anteriores

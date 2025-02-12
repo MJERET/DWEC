@@ -1,0 +1,87 @@
+
+		
+	DWEC.
+	16-12-2024
+
+	Programación asincrona
+		
+		* Vamos a hacer uso de las API red.
+		* Undécima parte JSON. 
+		
+	- Son las siglas de JS Objecto Notation, es un formato ligero de datos, con una estructura (notación) específica.
+	  es totalmente compatible de forma nativa con JS. Como su propio nombre indica, JSON se basa en la sintaxis que tiene JS para crear objetos.
+	
+	  Va siempre {}
+
+	- Su contenido puede ser simplemente un Array, Number, String, Boolean...
+	  Lo mñas habitual es que sea un Object o un Array.
+
+	Se puede comprobar en JSON lint si algo concreto es un JSON o no:
+		* Hay que considerar que tienen un formato considerado, como también hay que tener en cuenta los espacios en blanco.
+		* El contenido que envio o recibo por JSON se puede ver en las siguientes páginas: jsonlint.com.
+	
+		En un ejemplo que vimos en clase. tenemos que tener encuenta que los espacios importan:.
+		{
+		"Name":"poke",
+		"Life":4		
+		""
+		...
+		}
+		Hay que tener en cuenta las comillas, no solo los espacios, sirve para verificar nuestro código.
+	
+	- Las propiedades tiene que estar entrecomilladas con <<comillas dobles "" >>
+	- Los textos String deben estar entrecomillados con <<comillas dobles "" >>
+	- Tipos de datos no validos: Function, Date, RegExp, u otros. No es posible almacenarlos en un JSON.
+	- Tampoco es posible añadir comentarios en JSON (Hay formatos derivados que si lo permiten como JSON5).
+	
+	Extensión en VSCode se llama Fix JSON que corrige los errores de formaton JSON. 
+	
+	En JSON existen un serie de métodos qe facilitan la tarea de pasar de un Objeto de JS a JSON y viceversa (parsear), pudiendo trabajar
+	con contenido de tipo String (que contenga un JSON) y objetos JS según interes.
+	Dichos métodos son los siguientes.
+	
+	Métodos:
+		* JSON.parse(str)			Convierte el texto str (si es un JSON valido) a un objeto y lo devuelve
+		* JSON.stringify(obj)			Convierte un objeto JS obj a su representación JSON y la devuelve.
+		* JSON.stringify(obj, props)		Idem al anterior, pero filtra y mantiene las propiedades del array props.
+		* JSON.stringify(obj, props, spaces)	Idem anterior, pero identa al JSON.
+		
+
+	Se le denomina parsear.
+	Toma el String que contiene el JSON válido y devuelve un objeto JS con la información estructurada. Lo hace el método JSON.parse()
+
+	const json = '{
+	"name":"Manuel",
+	"life":49
+	}';
+	const user = JSON.parse(json);
+	user.name; //"Manuel"
+	user.life; //49
+
+	La operación inversa, convertir un objeto JS a JSON también se puede realizar facilmente haciendo uso del metodo JSON.stringify():
+	
+		const user = {
+			name:"Manuel",
+			life:49,
+			talk function(){
+			return "hola!":
+			},
+		};
+
+	Array que actúa de filtro al generar el objeto.
+	
+		const user = {
+			name:"Manuel",
+			life:49,
+			power: 10,
+		};
+	JSON.stringify(user, ["life"]);'	//{"life":99}'
+	JSON.stringify(user, ["name", "power"]);//'{"name":"Manuel","power":10}'
+	JSON.stringify(user, []);		//Filtra todo
+	JSON.stringify(user, null);		//No filtra nada
+
+	Normalmente los contenidos JSON suele estar almacenados en un archivo externo, que se leerá desde el código JS.
+	Para ello, se utiliza la función fetch() para hacer peticiones a sitios que devuelven contenido JSON.
+	
+	También se pueden leer ficheros locales con contenido .JSON.
+	Se verá en el tema de Peticiones HTTP

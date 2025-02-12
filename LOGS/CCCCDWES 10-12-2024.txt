@@ -1,0 +1,62 @@
+
+	Clase del día 10-12-2024.
+	Hoy estamos modificando de nuestra aplicación libros.
+	libro.php y dentro de ella sus partes del view.
+	
+	Hemos insertado en save en libro.php una gestión de errores por si hay algun problema en 
+	Nuestra base de datos 
+	Inserción del try...catch en todas nuestras
+	//IMPORTANTE: comprobar que el borrado del libro, borra en CASCADA las entradas de la tabla ESCRIBEN´
+	Nos dara errores cuando borramos libros con excepciones o metemos libros con el mismo id 
+	
+	ID58
+	Pillar una versión que tenga todo lo hecho en clase xd
+	Vamos a modificar el archivo de modificar libros para que a la hora de modificar nos mire el 
+	Hemos cambiado elementos de la query.
+	una , y un   (espacio)xd
+	$libro['idlibro'] al ser autonúmerico no requiere de comilla simple. 
+
+	//Forma transaccional ID59
+	//INICIAR la transación
+	$db->mysqli_autocommit(FALSE); //mysqli_autocommit($db, FALSE);
+	$db->commit();		       //mysqli_commit($db)
+		
+	//Si todo va bien... CONFIRMAR transacción
+	$db->commit8);
+	y 
+	//Si hhay erro llamamos en el catch un 
+	$db->rollback();
+
+	try {
+	    } catch (mysqli_sql_exception $e) {
+                echo "Error: " .$e->getMessage();
+            } finally { $db-> close(); }
+	}
+
+	Añadimos al libro:
+	$libro['idLibro']
+	
+	<?PHP  echo $_REQUEST['idLibro']?>  
+
+	//Si hay libro modificar y si no hay insertar
+	Tenemos que meter en el envio de nuestro formulario el id de libro, para 
+	<input type='hidden' name='idllibro' falta cosa>
+
+	Ahora tenemos que hacer que actualice los autores
+	como son id no van con comillas simples,sino que van con comillas ""
+	vamos a crear la query de forma separada
+	echo "<br> $q"
+	$db->query($q);
+	
+	Muchas modificaciones hemos cambiado la request 
+
+	if ($db-> affected_rows == 1) {
+	// Actualizar "escriben"
+	// Borrar autores antiguos para insertar lo nuevos autores
+	$q = "DELETE FROM escriben WHERE idLibro =".$libro['idLibro'];
+	//echo '<br>$q';
+	$db->q
+	}
+
+	Hemos implementado el rollback en varias ocasiones
+	Hemos movido el id del libro debajo del input

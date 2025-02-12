@@ -1,0 +1,24 @@
+
+
+
+		DWEC
+
+
+	19-11-2024
+
+	UNICODE. Es el nombre por el que se conoce al sistema moderno de codificación de caracteres que se usa en informática. Cada carácter tiene su representación Unicode, que se basa en un código o "code point".
+	Caracter 	Unicode 	Decimal 	Hexadecimal 	EntidadHTML 	Unicode
+	   A 		 U+0041		 65 		 0x0041		 &#65 		 \u{0041}
+
+	Métodos.
+	\u{number}	Devuelve el carácter unicode representado por el número hexadecimal number.
+	
+	string.fromCodePoint(number) Devuelve el carácter representado por el número number. 
+	
+	codePointAt(pos) 	Devuelve el valor decimal del carácter de la posición pos del texto.
+
+	Un emoji es una represtación visual y gráfica de un concepto.
+	Forma parte de Unicode.
+	Se trata de un concepto universal, que las diferentes plataformas (WhatsApp, Twitter...) o sistemas operativos (Windows, Linux, Mac, Android...) dibujan de diferente forma.
+
+	Los primero emojis que se crearon funcionan exactamente como los caracteres o simbolos. 

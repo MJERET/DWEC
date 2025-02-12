@@ -1,0 +1,50 @@
+
+
+	DWEC. 
+
+	29-11-2024
+
+	EVENTOS
+
+	Hasta ahora programación tradicional: instrucciones que se ejecutan según una secuencia.
+	Programación basada en eventos: instrucciones que se ejecuntan cuando "ocurre algo"
+
+	En JS hay varios tipos de eventos asociados a acciones del usuario aunque hay alguno automático, como el que sucede cuando termina la carga de una página: onload en <body>
+	
+	Página de mozilla  https:..
+	Página de w3school https://www.w3schools.com/js/js_events.asp
+
+	Un evento es cualquier suceso que puede producirse en un elemento de una página web, un mecanismo que puede provocar una reacción mediante la ejecución de un código específico.
+
+	El manejador del evento es la acción que nos permite ejecutar un código. Ejemplo:
+		- Pulsar un boton onclick.
+		- Pulsar una tecla.
+		- Pulsar sobre un elemento HTML.
+		- Modificar un campo de texto (suelen empezar por on ¡No siempre!)
+
+	Capturar un evento es programar la acción. El DOM es quien gestiona. 
+	SINTAXIS
+
+	<Elemento_HTML evento='códigoAqui'>
+	Ejemplo:
+	<Elemento_HTML onclick="this.innerHTML = Date()"> Pulsar para saber la hora. </button>
+	
+	El modelo de eventos en línea o también conocido como eventos en atributos HTML es el modo más sencillo y menos recomendable.
+	
+	Cada elemento XHTML tiene sus posibles eventos como propiedades (generalmente es ?...? manejador es "on" seguido de la acción).
+	
+	El código JS se asocia a un atributo del elemento HTML:
+	<input type = "button" value = "Boton Hola Mundo" onclick = "alert('Hola Mundo')"/>
+
+	Manejadores como atributos de etiquetas XHTML. Ejemplo con/sin this
+
+	Cabecera que al pulsar escriba "mi texto", al pasar raton a rojo, al salir ratón blanco.
+	(esto está hecho en visual).
+
+	Hay acciones que desencadenan varios elementos.
+	Por ejemplo, submit desencadena onmousedown, onclick, onmpuseup, onsubmit. Para evitar que el navegador ejecute la acción por defecto necesitamos añadir "return false;"
+		<a href="http://www.google.com" onclick="alert('Vamos a chrome'); return false"> Pulsa para ir a chrome</a> 
+	también se puede preguntar al usuario si quiere o no ir a chrome:
+	function preguntar() {
+		return confirm("seguro que quieres ir a chrome?");
+	}

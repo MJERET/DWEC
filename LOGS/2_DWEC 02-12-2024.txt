@@ -1,0 +1,29 @@
+
+
+	DWEC Eventos segunda parte:
+		02-12-2024
+
+	- El modelo de eventos en linea, o tambien...
+	- Ejemplo de manejadores:
+	- Como hacerlo con una funcion externa. 
+	- 
+
+	Se utiliza para vincular un evento a una función JS.
+	Parametros:
+		- El evento (el nombre sin "ON")
+		- La función a ejecutar.
+		- useCapture(generalmente "False") si se quiere que al iniciar la captura todos los eventos de ese tipo se lancen en el mismo listener.
+
+	Sabemos como asociar "escuchadores" o listeners a elementos para que, cuando se produzca un evento (click, mouseover, blur, etc). Se ejecute una función.
+	
+	Pero la mayor parte de las veces se necesita saber información....
+
+	Utilizamos modelo eventos W3C utilizamos addEventListener 
+	Automaticamente el navegador (salvo MS) crea un objeto de tipo evento (e, por ejemplo) que almacena el evento que se ha producido.
+	
+	Con e.type extraemos el tipo de evento que se ha generado. 
+	
+	document.querySelector() es un método que permite seleccionar el primer elemento que coincida un selector CSS especificado...
+	
+	Información de 405. 
+	Utilizamos 

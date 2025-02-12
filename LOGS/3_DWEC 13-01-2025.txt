@@ -1,0 +1,43 @@
+
+	DOM
+
+	1. Acceso desde propiedades del document atajos para obetner elementos comunes.
+	Forma de acceder a esos elementos.
+		
+	- Document.documentElement:
+	- Document.head
+	- Document.body
+	- Document.title
+	- Document.link
+	- Document.anchor
+	- Document.forms
+	- Document.images
+	- Document.scripts
+
+	Accedemos mediante: getElementById. Apartir de su clase, mediante getElementsByClassName, GetElementsByTagName.
+	A partir de su selector CSS, mediante querySelector (JS6 Accedemos a elementos del DOM). 
+	
+	GetElementById(identificador). // "idForm"
+	Está función devuelve un elemento DOM del subárbol cuyo identificador sea el indicado en la cadena "identificador".
+		
+		car myDiv = document.getElementById("miDiv");
+		alert("El html es miDiv es: " + myDiv.innerHTML);
+
+	GetElementByName(nombre). // name = "nombreForm"
+	
+	GetElementsbyTagName(etiqueta). // etiqueta <form>
+		var miDiv = document.getElementById("miDiv");
+		var losP = miDiv.getElementsByTagName("P");
+		var num = losP.length;
+		alert ("hay")
+
+	GetElementsbyTagName(nombre) // class = "miNombre"
+
+	querySelector(selector). Devuelve el primer nodo seleccionado por el selector CSS indicado.
+	 let = document.querySelector("p.error");
+	 // la variable nodo contendrá el primer párrafo de clase _error_
+
+	querySelectorAll(selector). Devuelve una colección con todos los nodos seleccionados por el selector CSS indicado.
+	
+	
+	//!!! Modificación = .inner.html  || añadir atributo a element = .setAttribute  ||  modificar clases = .className

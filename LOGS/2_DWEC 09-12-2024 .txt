@@ -1,0 +1,72 @@
+
+	Es un objeto semenjante a un Array que no permite valores duplicados.
+	cons miSet = new Set(XXXXXXXXXXXXX) dide X es un iterable (array, map string, set)
+
+	const miSet = new Set("pamplinas");
+	Normallmente se recorre con un for.of
+	
+	let conjunto = new Set([2,3,4,5,3,2])
+	for let elem of conjunto {
+	console.log(elem)
+	}
+	
+	add, delete, clear, size, has
+	Recordatorio: con spread se convierte a Array. 
+	const miArray = [miConjunto]
+
+	Propiedad O metodo.
+	
+	.size Propiedad que devuelve el número de elementos que tiene el conjunto.
+	.add(elemento) Añade un elemento al conjunto (si no está repetido y devuelve el ser). No da error si ya está
+	.has(elemento) Comprueba si elemento ya existe en el conjunto. Devuelve si existe. 
+	.
+	.
+	
+	Una de las caracteristicas de los arrays y los Conjuntos: organiza los datos en forma de pares clave-valor con claves únicas.
+	
+	const fruits = new Map ([
+		["apple",500],
+		["bananas",300],
+		["oranges",200],
+	]);
+	Console.log(fruits)
+	Mejor se crean vacíos y se usa: 
+		fruits.set(key,value);
+	
+	Recorridos con for..of y conversión con spread
+	
+	Propiedades:
+	
+	.size
+	.set(key, value) Propiedad que devuelve el número de elementos que tiene el mapa.
+	.has(key) Establece o modifica la clave key con el valor value.
+	.get(key) Comprueba si key ya existe en el mapa y devuelve si existe o no.
+	.delete(key) Obtiene el valor de la clave key del mapa.
+	.clear() Vacía el mapa completamente. 
+	
+	
+	metodos:::
+	find. Devuelve el primer elemento que cumpla la condición (o undefined si no la cumple nadie). Ejemplo:
+	
+		let arrayNotas
+	
+	- every / some.
+	La primera devuelve true si TODOS los elementos del array cumplen la condición y false en caso contrario. La segunda devuelve
+	true si ALGÚN elemento del array cumple la condición.
+	
+	- map.
+	Permite modificar cada elemento de un array y devuelve un nuevo array con los elementos del original modificados.
+	
+	-reduce.
+	Devuelve un valor calculado a partir de los elementos del array. En este caso la función recibe como primer parámetro el valor calculado hasta ahora y el método 
+	tiene como 1º parámetro la función y como 2º parámetro al valor calculado inicial (si no se indica será el prier elemento del array).
+	
+		let arrayNotas = [5.2,3.9,6,9.75,7.5,3]>;
+		let sumaNotas = arrayNotas.reduce((total, nota) => total += nota ,0) //total 35.35
+		//se podría haber omitido el valor inicial 0 para total.
+		let sumaNotas = arrayNotas.reduce((total, nota) => total += nota) // total 35.35
+		
+		let arrayNotas = [5.2, 3.9, 6, 9.75, 7.5, 3];
+		let maxNota = arrayNotas.reduce((maxNota) => nota > max ? nota : max)
+
+	Dado un array de los dias de la semana, (L....D) Dime los días que empiezan por M Con lo que hemos visto hoy!

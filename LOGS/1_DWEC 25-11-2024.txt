@@ -1,0 +1,97 @@
+
+
+	
+		DWEC
+
+		UNICODE. Es el nombre por el que se conoce al sistema moderno de codificación de caracteres que se usa en informática. Cada carácter tiene su representación Unicode, que se basa en un código o "code point".
+	Caracter 	Unicode 	Decimal 	Hexadecimal 	EntidadHTML 	Unicode
+	   A 		 U+0041		 65 		 0x0041		 &#65 		 \u{0041}
+
+	Métodos.
+	\u{number}	Devuelve el carácter unicode representado por el número hexadecimal number.
+	
+	string.fromCodePoint(number) Devuelve el carácter representado por el número number. 
+	
+	codePointAt(pos) 	Devuelve el valor decimal del carácter de la posición pos del texto.
+	
+		Un emoji es una represtación visual y gráfica de un concepto.
+	Forma parte de Unicode.
+	Se trata de un concepto universal, que las diferentes plataformas (WhatsApp, Twitter...) o sistemas operativos (Windows, Linux, Mac, Android...) dibujan de diferente forma.
+
+	Los primero emojis que se crearon funcionan exactamente como los caracteres o simbolos. 
+
+		
+	Metodo length				Método Split
+	Console.log("stop".length)		Console.log("".split(" "))
+	Console.log("stop".length)		Console.log("".split(""))
+
+	Metodo navigator.
+	Almacena información sobre el navegador que está ejecutando la aplicación, como si estan activas las cookies, si esta ejecutando
+	
+	Tenemos muchas etiquetas para el navigator.
+	.appCodeName;
+	.appName;
+	.appVersion;
+	.product;
+	.platform;
+	.onLine;
+	.language;
+	.cookieEnable;
+	.userAgent;
+	.geolocation; Todas están en W3SCHOOL.
+
+	Screen. 
+	Contiene la información del objeto screen (pantalla) del visitante. Se refiere a la plantalla física donde se muestra la ventana del navegador No hay standars.
+	
+	History.
+	Para consultar las URL de las páginas que ha visitado un usuario dentro de una ventana del navegador. No hay estandar. Permite manipular el historial utilizando JS sin necesidad de interactuar con el propio navegador.
+	length.
+
+
+
+	OBJETOSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
+
+	Valor en memoria al que se refiere mediante un identificador. Es como una variable especial que puede contener más variables en su interior. Las propiedades se definen en modo nombre:valor y sus métodos son funciones.
+	En JS "casi todo" son objetos.
+		const coche {
+
+		}
+
+	Podemos definirlo de tres maneras:
+		1. Objetos literals o inicializador de objetos. Conjunto de pares clave:valor separados por comas entre {}.
+		let nombreobjeto = {
+			nombre: Pedro;	
+		}	
+
+		2. Utilizando new var persona = new Object():
+			persona.nombre = "Pedro";
+		
+		3. Constructor.
+			Functión Persona (nom, ape, ed){
+			this.nombre: nom;
+			this.apellido: ape;
+			} 
+
+		var pedro new Persona ("Pedro", "Picapiedra", 35)
+
+	lA FORMA DE ACCEDER A LOS ATRIBUTOS (PROPIEDADES:)
+		coche.cilindrada; o coche[cilindrada]; 
+		Recomendada 		Más usadas en arrays.
+
+	La más utilizada en JS es la notación con puntos, mientras que la notación con corchetes se suele conocer en otros lenguajes como <<array asociativos>> o <<diccionarios>>.
+
+	También se pueden añadir propiedades al objeto despues de ser creado.
+		
+	objeto.propiedad
+	objeto["propiedad"]
+	objeto[expresión]
+	Se recorren con el bucle for..in (p.e sin no se saben los nombres de las propiedades).ç
+		for (<nombre_variable> in <nombre_objeto>) {
+
+		}
+	
+	Tipos de metodos:
+	Al crear una variable de un determinado tipo de dato, las variables será siempre también de tipo object, ya que todas las variables heredan de este tipo de constante
+
+
+	

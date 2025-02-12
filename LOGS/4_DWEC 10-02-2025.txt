@@ -1,0 +1,34 @@
+
+	Async - await.
+	Forma más legible de trabajar con código asíncrono en JS reemplazando el uso excesivo de promesas y then().
+	
+		- async convierte una función en una función que devuelve una promesa.
+		- await Solo puede utilizarse dentro de una función async. Se usa para esperar que una promesa se cumpla
+		y devuelva el resultado: es decir, detiene la ejecución del código hasta que la promesa se resuelva.
+		
+		Normalmente se utiliza con un try/catch.
+		
+	const funcionAsincrona = async() => {
+	//código...
+	} 
+	async function funcionAsincrona2() {
+	//código
+	}
+	
+	EJEMPLO: 
+	console.log(1+1); hola(); console.log(2+2); 
+	
+	console.log(1+1);
+	try () {
+		hola();
+	} catch (error) {
+		console.log(error);
+	}console.log(2+2);
+	
+	Buena práctica es utilizarlo en partes críticas como conectar a una BBDD, consultar una API, autenticar un usuario.
+		
+	"await" funciona solamente dentro de las funciones definidas con async. Con await se espera hasta que la promesa responda y devuelve su resultado.
+	
+	Con async-await se consigue una sintaxis más elegante que con promise.then Además es más facil de leer y de escribir porque nuestra mente es asíncrona.
+	
+	Conexión con apis

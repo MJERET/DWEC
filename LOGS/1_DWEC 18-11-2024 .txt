@@ -1,0 +1,9 @@
+
+	Creación del busca minas, tiene que estar listo antes del fin de la evaluación.
+	
+	- Para el busca minas, podemos hacer uso de CSS en un archivo separado.
+	- 
+
+	1. Creación del cuadrado o cuadricula.
+	2. Creación del input del usuario.
+	3. A cada celda, la puedo llamar con un clase. 

@@ -1,0 +1,56 @@
+
+
+	DWES 
+
+	03-12-2024
+
+	ACTION(). En nuestro programa de la base de datos de biblioteca action(), es una palabra,
+	que registra y se hace cargo de los enlaces dentro de nuestro formulario de libros.
+	
+	1. NO ES UN MÉTODO. Siempre que haya un boton, existe una clausula action. 
+	
+	2. Enlaces, gestionados y recogidos por el $action.
+	Dentro del enlace del href, nos muestra el id del libro. CASO DEL V1.php
+	
+	3. Dentro de la modificación del libro, también dentro del href, está las modificaciones realizadas.
+	Nosotros podemos incluso dentro del enlace de la url, modificar los datos en envio.
+	
+	4. http://localhost/UD3/PDOCLASE/v1.php?action=formularioModificarLibro&idLibro=1 || http://localhost/UD3/PDOCLASE/v1.php?action=formularioModificarLibro&idLibro=4
+	Siendo el ultimo número a cambiar, dentro de el si cambiamos dichos datos, podemos saltar a los otros libros.
+	
+	5. Modulos a desarrollar de nuestra biblioteca:
+		
+	Esquema de nuestra aplicación. 
+		MODULOS:
+			- LIBROS.php
+			- PERSONA.phh
+		VIEWS:
+			- LIBROS.php
+				- Save (HECHO)
+				- All  (HECHO)
+				- Delete (HECHO, PERO SIN FORMULARIO)
+			- PERSONAS.php
+				- Save (HECHO)
+				- All  (NO HECHO, sin embargo se puede ver en libros Save)
+				- Delete (NO HECHO)
+		- Cambios que tenemos que realizar:
+			
+			* Delete en libros.php, para hacer una creación del formulario correcta.
+			* All en libros.php, para que solo muestre los libros.
+			
+			* All en personas.php para que sea aparte de all.libros.php
+			* Delete en personas.php para que se pueda realizar el edit de los autores. 	
+
+	formSaveAutor.
+		persona/save
+		libro/save
+		libro/all
+
+	UNA VISTA NO PUEDE LLAMAR A OTRA, ESO ES TRABAJO DEL CONTROLADOR. 
+	-! Cuiado con los enlaces de los form, puede hacer que no se muestre nada.
+
+	Hacemos una insersión en escriben cada vez que en un libro haya más de un autor. 
+
+			
+		
+ 

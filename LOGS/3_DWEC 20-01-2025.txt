@@ -1,0 +1,113 @@
+
+	DWEC.	
+	20-01-2025
+	DOM
+	Creación de elementos. 
+	Una de las razones de la aparición de JS fue la necesidad de validar datos de formularios en el cliente 
+	La aparicion posterior de AJAX ha provocado que el principal uso actual sera la manipulación dinámica y ña comunicación asíncorna. 
+	En cualquier caso, la creación y manipulación...
+	
+	Los formularios HTML son elementos frecuentemente utilizados para recopilar y enviar datos de los usuarios.
+	Sustentan la interacción entre los usuarios y los sitios web al permitirles ingresar información, realiazr selecciones y enviar datos a servidores para su procesamiento.
+	...
+	
+	Los navegadires crean, al cargar una pagina web:
+	- Un array forms con referencias a todos los formularios de la misma, al que se accede mediante document.forms
+	- Un array, elements por caada formulario con todos los elementos que contienen dicho formulario (botones, listasm cuadros de texto...): documnet.form[0].elements[2];
+	
+	EJEMPLO.
+	<form>
+		<label for="username"> name </label>
+		<input type="text" id="username" name="username"> <br>
+		
+		<label for="pwd"> Password </label>
+		<input type="text" id="username" name="username"> <br>
+			
+		<input type="submit">	
+	</form>
+	
+	Para hacer referencia a un formulario en JS, se pueden utilizar métodos DOM como getElementById() o document.forms
+		
+		const form = document.getElementById('singup');
+		const firstForm = document.forms[0]; // Primer formulario
+		..
+	Si hay cambioas de orden posteriores o añadidos o suprimidos, este método de acceso no es válido. Se usan los atributos name o id.
+	
+		<form name="miPrimerForm"></form> 	Mientras que el id debe ser único para todas las etiquetas de la página, el name simplemente debe ser único para todas las etiquetas form
+		<form id="miPrimerForm"></form>
+	
+	Tambiñen se puede acceder a los formularios y a sus elementos utilizando las funciones DOM de acceso directo a los nodos.
+	
+	....
+	
+	También se puede acceder a los formularios y ausu elementos con la siguiente sintaxis:
+	
+		<form name="miFormulario">
+		....
+		</form>
+
+		- Let objetoFormulario = ....
+	
+	Un formulario web es un elemento que permite recopilar datos de forma ordenada para enviarlos a su validación a un servidor
+	Existe una validación en el cliente...
+	
+	Método para enviar los datos:
+		- action 
+		- method
+		- target
+		- name
+
+	JS usa el elemento HTMLFormElement para representar un formulario. Este objeto tiene una propiedad como las correspondientes a los atributos HTML action y method.
+	 
+	- Métodos como submit() y reset() se utilizan para enviar y restablecer formularios.
+	
+		const form = document.getElementById('signup');
+		form.action;
+		form.method;
+		form.submit;	
+	
+	Para adjuntar un detector de eventos al evento de envio, se utiliza el método addEventListener();
+	Si se quiere interceptar el comportamiento del envio de formulario predeterminado y ejecutar una lógica personalizada antes de permitir que el formulario se envíe al servidor se utiliza preventDefault(). Ejemplo:
+	const form = document.getElementById('singup');
+	form.addEventListener('submit', (event)) => {
+		event.preventDefault(); //
+	}
+
+	Validación de JS. No garantiza que los datos son correctos.
+	Una cuestión de experiencia de usuario que evita mandar datos erróneos al servidor y hacer operaciones innecesarias.
+	Pero es posible deshabilitar el JS del navegador o utilizar la consola del desarrollador para cambiar estos datos, por lo que no se puede asegurar su validez.
+	Por eso, la seguridad en la validación de un formulario es muy importante
+	
+	El elemento principal del formulario se marca con la etiqueta <input> 
+	Segun su funcionalidad, los tipos input se llaman:
+		- Controles de formularios ->
+		- Campos de formularios ->
+	
+	Mas comunes:
+	- type
+		- textarea
+		- text
+		- button
+		- radiobutton
+		- checkbox.
+		- select(-one o -multiple)
+	- name
+	- value
+	
+	Evento más utilizados:
+	- onclick
+	- onchange
+	- onfocus
+	- onblur
+
+	atributos:
+	- type
+	- name
+	- value
+	- size
+	- maxlenght
+	- checked.
+	- disable
+	- readOnly
+	- src
+	- alt.

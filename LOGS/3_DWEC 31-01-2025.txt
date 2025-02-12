@@ -1,0 +1,52 @@
+
+	HTML5.
+	Web Storage.
+	Api de alamacenamiento web que proporciona mecanismos para que el navegador pueda guardar información de tipo
+	clave - valor, localmente en el ordenador del usuario, más avanzadas que las cookies.
+		
+		- sessionStorage: Almacena información mientras el navegador está abierto, es decir, mientras este abierto
+		- localStorage: Similar a sessionStorage, pero los datos se mantienen aunque cerremos el navegador.
+	
+	Es más seguro y almacena más información que las cookies. (10MB vs 4KB) El web storage se almacena por origen.
+	Todas las páginas del mismo origen pueden acceder a los mismos datos.
+
+	Trabaja con 4 métodos.
+	
+		- setItem Permite crear un elemento de almacenamiento web.
+		- getItem Permite consultar un elemento.
+		- removeItem Permite eliminar información de un elemento.
+		- clear Permite eliminar el elemento completo.
+
+	Para saber si un navegador lo soporta hacemos: if(typeof(Storage)!=="undefined").
+	
+	Son siempre cadenas:
+	
+	localStorage.setItem("Nombre", "Juan jose");	//Recomendado
+	
+	localStorage.apellido = "García"; 		//NO RECOMENDADO. Cualquier cambio en el navegador podría fallar.
+	
+	Análogo con el resto de los métodos.
+	- localStorage.getItem
+	- localStorage.remove
+	- localStorage.setItem
+
+	!!
+		- Compatible con todos los navegadores
+		- Permite almacenar valores correctamente, evitando problemas con algunos tipos de datos.
+		- Sigue el estándar del API Web Storage.
+		- Más seguro antes actualizaciones.
+	!!
+	
+	-Si quieres almacenar un objeto, debes usar JSON.stringify() con setItem()
+	
+		const usuario={nombre:"Juan", edad:30};
+		localStorage.setItem("usuario", JSON.stringify(usuario));
+
+	Para recuperarlo.
+		const ...
+
+	4.13 Importante para el buscaminas:
+		
+		- Comprobar si el navegador soporta webStorage.
+		- Mostrar un mensaje con el nombre del usuario si este se ha logueado en la página, diferenciando...
+		-  

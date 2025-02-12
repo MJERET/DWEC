@@ -1,0 +1,18 @@
+
+	DWEC.
+	Objetos del navegador. Window. Cuadreos de diálogo.
+	
+	- Son tres metodo más del objeto window que se utiliza con frecuencia para interactuar con el usuario.
+		- Alert. Muestra un mensaje a un usuario, pero no recoge ningún valor.
+		- Prompt. Muestra un mensaje a un usuario y, ademas, permite que el usuarui introduzca un valor en su interior. Este valor quedará recogido en la variable a la que se asigne el prompt (mensaje, <por defecto>)
+		- confirm Muestra un mensaje por pantalla y da dos opciones aceptar y cancelar, ambas son respuestas boolean y son verdadero o false.
+		
+		- SetTimeout / ClearTimeOut / Set Interval.
+		El objeto window permite ejecutar codigo en intervalos de tiempo.
+			1. Se indica la funcion al ejecutar y el tiempo que tiene que transcurrir (en milisegundos) antes de que se ejecute.
+			2. Si el método anterior se asigna una variable se puede pasar esa variable para detener su ejecución. 
+			3. Con los mismos parámetros que setTimeOut, en este caso repite una función cada vez que transcurre el intervalo de tiempo indicado en milisegundos. 
+		
+		- La que más vamos a usar es la 3rd
+
+		

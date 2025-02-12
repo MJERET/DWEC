@@ -1,0 +1,35 @@
+
+
+		DWES 
+	27-11-2024
+	
+	Empezamos con phpMyAdmin
+	- En PHP 5 como las versiones anteriores existia una extensión mySQL (no mySQLi).
+	- Existian una serie de funciones sueltas mySQL_ (ejemplo: mySQL_connect).
+
+	
+	
+	Desde PHP 5 tenemos dos marcas: 
+		- mySQLi (improve) funciona de forma procedimental con extensión a POO.
+			Solo se puede conectar a datos de mySQL
+
+		- PDO. Puede conectarse a cualquier tipo de base de datos.
+
+	Ejemplo de mySQLi.
+	Para conectarnos con la BD  instanciamos un objeto mysql 
+	
+	$this->db = new mysqli("servidor-de-base-de-datos", "usuario", "contraseña", "nombre base de datos");
+	//Cambiado
+	$this->db = new mysqli("localhost", "root", "root", "");
+	Si no ponemos puerto está por defecto en el 3306
+	Tenemos que insertar en nuestra base de datos
+
+	Query nos ejecuta cualquier tipo de sentencia SQL, siempre y cuando este en nuestra db 
+	Creamos una pequeña base de datos:
+	Le vamos a dar el nombre de books
+
+
+	Cursor una estructura de datos iterables.
+
+	¿Como gestiona la navegación entre los distintos formularios ($ACTION)?
+	¿Qué hace $ACTION?

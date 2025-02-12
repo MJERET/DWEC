@@ -1,0 +1,41 @@
+	
+	DWEC
+	11:29 11/02/2025
+	concepto.
+	Propagación es simple.
+	Cuando un evento ocurre en un elemento del DOM, se ejecutan manejadores que tiene asignados , pero luego
+	se ejecutan también los manejadores de su padre, y sucesivamente del resto de elementos hasta la raiz.
+	
+	EJEMPLO: 
+	<form onclick="alert('form')">FORM
+	 <div onclick="alert('div')">DIV
+	  <p onclick="alert('p')"></p>
+	 </div>
+	</form>
+	
+	En el método addEventListener tiene tres atributos: el primero lleva el nombre del evento que se está
+	"escuchando", el segundo la función (que puede ser anonima o no) y el tercero, opcional, tiene que ver con la "fase de burbujeo o propagación".
+	hay dos formas:
+	
+		- Bubbling dentro hacia afuera (false)
+		- Capturing fuera hacia adentro (true)
+	
+	Su sintaxis es:
+	
+	elemento.addListener()...
+	
+	Previene la propagación del evento.
+	Su sintaxis es: event.stopPropagation()
+	
+		document.getElementById('boton').addEventListener('click', function(e)){
+		console.log("Botón hizo click");
+		event.stopPropagation();
+		}
+
+	Si un elemento tiene múltiples manejadores para un solo evento, para detener la propagación y prevenir que el resto de manejadores del elemento actual se ejecuten, se usa:
+	event.stopImmediatePropagation().
+	
+	No es conveniente parar la propagación...Sistemas de análisis
+
+	
+	

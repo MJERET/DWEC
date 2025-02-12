@@ -1,0 +1,69 @@
+
+		
+	DWEC. 
+	03-12-2024.
+	
+	Información del 405.
+		
+		Utilizamos modelo eventos W3C Utilizamos addEvent Listener.
+		Automaticamente el navegador (salvo MS) crea un objeto de tipo evento (e, por ejemplo).
+		que almacena el evento que se ha producido.
+	
+		Con e.type extraemos el tipo de evento que se ha generado.
+		Con e.target extraemos el elemento que ha producido ese evento.
+
+	QuerySelector.
+		Los métodos tradicionales de búsqueda en DOM los proporcionan getElementById() y getElementByClassName()
+
+		Existen otros dos métodos más modernos basados en los selectores CSS;
+
+		element.querySelector(id) 
+			Busca el primer (solor uno) elemento que tenga el selector CSS llamado id	
+			- Devuelve Null
+		array.queryselectorAll(id) 
+			Busca todos los elementos que tengo el selector CSS llamado id. Devuelve un array de elementos DOM
+			- Devuelve []
+
+		Document.querySelector() es un método que permite seleccionar el primer elemento que coincida con un selector CSS especificado dentro del documento HTML.
+		Toma como argumento un selector CSS (por ejemplo, una clase, un ID, un elemento HTML, etc.) y devuelve el primer elemento del documento que coincide con ese selector o null, si no existe.
+	
+		Elemento con id "miElemento", se selecciona con document.query.Selector('#miElemento'). Porque se trata de un id Todos los elementos de la clase "miClase", se seleccionan con document.querySelector('miClase').
+
+		Ejercicio con la papelera de reciclaje de windows.
+	
+	Destructuración de arrays.
+	
+		Utilizando la desestructuración de objetos se puede separar en variables las propiedades que tenga un objeto.
+		const user = {
+			name="Otto",
+			role="arquero",
+			life:99;
+		}
+		//Cómo se desestructura...
+		
+		const {name, role, life} = user;
+		console.log(name);
+		console.log(role, life);
+
+		//o también 
+		console.log({name, role, life});	
+		// En realidad es volver a estructurar para mostrar.
+		
+		/*
+		La desestructuración solo funciona para estructura de datos Con un objeto que tenga...
+		
+		*/
+
+	Copias de objetos.
+		Trabajando con valores primitivos en JS se pasan por valor.
+		Pero, para los valores más complejos se utilizan el paso por referencia.
+		Eso supone que los tipos de datos complejos no son copias, son referencias (algo así como accesos directos).
+		
+		Ejemplo.
+		Al cambiar el primer elemento del array features del objeto fullUser y si se comprueba el contenido del objeto use , también ha cambiado. 
+		En realidad la propiedad features del objeto fullUser es una referencia a la propiedad features del objeto user, y es realmente la que se está modificando. 
+
+
+	structuredClone()12:03 03/12/2024
+	rest(como en arrays)
+	
