@@ -1,0 +1,89 @@
+<html>
+    <head>  
+        <title>Ejercicio 102.5</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+            /*
+            6.- Organiza el código usando funciones:
+            • showContact: muestra un contacto según índice, validando si la lista es un array.
+            • showAllContacts: muestra todos los contactos, validando si la lista es un array.
+            • addNewContact: agrega un nuevo contacto si los datos son válidos y la lista es un array.
+            */
+
+            // Datos iniciales
+            let contactos = [
+                { nombre: "Maxwell Wright", telefono: "(0191) 719 6495", correo: "curabitur.egestas.nunc@nonummyac.co.uk" },
+                { nombre: "Raja Villarreal", telefono: "0866 398 2895", correo: "posuere.vulputate@sed.com" },
+                { nombre: "Helen Richards", telefono: "0800 1111", correo: "libero@convallis.edu" }
+            ];
+
+            // Función para mostrar un contacto según índice
+            function showContact(contactList, index) {
+                if (contactList instanceof Array && contactList[index]) {
+                    console.log(`Contacto ${index + 1}:`, contactList[index].nombre, contactList[index].telefono, contactList[index].correo);
+                } else {
+                    console.log("Error: La lista no es válida o el índice está fuera de rango.");
+                }
+            }
+
+            // Función para mostrar todos los contactos
+            function showAllContacts(contactList) {
+                if (contactList instanceof Array && contactList.length > 0) {
+                    console.log("Lista completa de contactos:");
+                    contactList.forEach((contact, i) => {
+                        console.log(`${i + 1}. ${contact.nombre} | ${contact.telefono} | ${contact.correo}`);
+                    });
+                } else {
+                    console.log("La lista de contactos está vacía o no es válida.");
+                }
+            }
+
+            // Función para agregar un nuevo contacto
+            function addNewContact(contactList, name, phone, email) {
+                if (contactList instanceof Array && name && phone && email) {
+                    contactList.push({ nombre: name, telefono: phone, correo: email });
+                    console.log("Nuevo contacto agregado correctamente.");
+                } else {
+                    console.log("Error: Todos los campos son obligatorios o la lista no es válida.");
+                }
+            }
+
+            // Menú principal usando funciones
+            function menu() {
+                let opcion;
+                do {
+                    opcion = prompt(
+                        "Elige una opción:\n" +
+                        "1. Mostrar el primer contacto (primero)\n" +
+                        "2. Mostrar el último contacto (último)\n" +
+                        "3. Mostrar todos los contactos (todos)\n" +
+                        "4. Añadir un nuevo contacto (nuevo)\n" +
+                        "5. Salir del programa (salir)"
+                    );
+
+                    if (opcion === "1" || opcion === "primero") {
+                        showContact(contactos, 0);
+                    } else if (opcion === "2" || opcion === "último") {
+                        showContact(contactos, contactos.length - 1);
+                    } else if (opcion === "3" || opcion === "todos") {
+                        showAllContacts(contactos);
+                    } else if (opcion === "4" || opcion === "nuevo") {
+                        let nombre = prompt("Introduce el nombre del nuevo contacto:", "Nombre Apellido");
+                        let telefono = prompt("Introduce el teléfono del nuevo contacto:", "000-000-0000");
+                        let correo = prompt("Introduce el correo del nuevo contacto:", "correo@ejemplo.com");
+                        addNewContact(contactos, nombre, telefono, correo);
+                    } else if (opcion === "5" || opcion === "salir") {
+                        console.log("Programa terminado.");
+                    } else {
+                        console.log("Opción no válida. Por favor, intenta de nuevo.");
+                    }
+                } while (opcion !== "5" && opcion !== "salir");
+            }
+
+            // Ejecutar menú principal
+            menu();
+        </script>
+    </body>
+</html>

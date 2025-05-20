@@ -49,7 +49,6 @@
 
 	}
 
-	
 	For in. Se utiliza para moverse por las propiedades de un objeto. 
 	for (variable in objeto) {
 		Instrucciones.
